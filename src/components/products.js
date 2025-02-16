@@ -29,30 +29,31 @@ const Products = ()=> {
         </Header>
         <Content>
         <Row>
-      <Col span={4}>    
-       <Menu
-        theme="dark"
-        onClick={onClick}
-        style={{
-          width: 256,
-          marginTop:50
-        }}
-        defaultOpenKeys={['sub1']}
-        selectedKeys={[current]}
-        mode="inline"
-        items={NavMenuItems}
-      /></Col>
+        <Col xs={24} sm={8} md={6} lg={4}>    
+            <Menu
+              theme="dark"
+              onClick={onClick}
+              style={{
+                width: '100%',
+                marginTop: 50,
+              }}
+              defaultOpenKeys={['sub1']}
+              selectedKeys={[current]}
+              mode="inline"
+              items={NavMenuItems}
+            />
+          </Col>
       <Col span={20} style={{ marginTop:50}}>
-      <div style={{ padding: '20px' }}>
-      <Row gutter={[16, 16]}>
+      <div style={{ padding: '20px'}}>
+      <Row gutter={[16, 16]} justify="center">
         {products.map((product) => (
-          <Col span={6} key={product.id}>
+          <Col xs={24} sm={12} md={8} lg={6} key={product.id}>
             <Card
               hoverable
               cover={<img alt={product.name} src={product.image} />}
+              style={{ borderRadius: '10px', overflow: 'hidden' }}
             >
               <Card.Meta title={product.name} description={product.description} />
-              <p style={{ fontWeight: 'bold', marginTop: '10px' }}>{product.price}</p>
             </Card>
           </Col>
         ))}

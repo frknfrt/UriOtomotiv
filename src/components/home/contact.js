@@ -1,22 +1,14 @@
 import React from 'react';
-
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Row, Col } from 'antd';
 const { TextArea } = Input;
 
-
 function AppContact() {
-
-const onClick = (event) =>{
-console.log("denemeeee",event.target)
-}
-
-const onFinish = (e) =>{
-  let body=e.message;
-  let subject=e.subject;
-  window.location.href="mailto:uriotomotiv@gmail.com?subject="+subject+"&body="+body;
-console.log(e);
-}
-
+  const onFinish = (values) => {
+    let body = values.message;
+    let subject = values.subject;
+    window.location.href = `mailto:uriotomotiv@gmail.com?subject=${subject}&body=${body}`;
+    console.log(values);
+  };
 
   return (
     <div id="contact" className="block contactBlock">
@@ -24,73 +16,45 @@ console.log(e);
         <div className="titleHolder">
           <h2>Lütfen Formu Doldurarak İletişime Geçiniz</h2>
         </div>
-        <Form
-        onFinish={onFinish}
-          name="normal_login"
-          className="login-form"
-          initialValues={{ remember: true }}
-        >
-          <Form.Item
-            name="fullname"
-            rules={[
-              { 
-                required: true,
-                message: 'Lütfen Ad Soyad Giriniz!' 
-              }]
-            }
-          >
-            <Input placeholder="Ad Soyad" />
-          </Form.Item>
-          <Form.Item
-            name="email"
-            rules={[
-              {
-                type: 'email',
-                message: 'The input is not valid E-mail!',
-              },
-              {
-                required: true,
-                message: 'Please input your E-mail!',
-              },
-            ]}
-          >
-            <Input placeholder="Email Adresi"/>
-          </Form.Item>
-          <Form.Item
-            name="telephone"
-          >
-            <Input placeholder="Telefon No" />
-          </Form.Item>
-          <Form.Item
-            name="subject"
-          >
-            <Input placeholder="Konu" />
-          </Form.Item>
-          <Form.Item
-            name="message"
-          >
-            <TextArea placeholder="Mesajınız" />
-          </Form.Item>
-          <Form.Item>
-            <Form.Item 
-              name="remember" 
-              valuePropName="checked"
-              noStyle
-              rules={[
-                { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Should accept agreement') },
-              ]}
+        <Row justify="center">
+          <Col xs={24} sm={24} md={18} lg={12}>
+            <Form
+              onFinish={onFinish}
+              name="contact_form"
+              className="contact-form"
+              initialValues={{ remember: true }}
             >
-              <Checkbox>I agree with terms and conditions.</Checkbox>
-            </Form.Item>
-          </Form.Item>
-          <Form.Item>
-            <Button onClick={onClick} type="primary" htmlType="submit" className="login-form-button">
-              Gönder
-            </Button>
-          </Form.Item>
-        </Form>
+              <Form.Item
+                name="fullname"
+                rules={[{ required: true, message: 'Lütfen Ad Soyad Giriniz!' }]}
+              >
+                <Input placeholder="Ad Soyad" />
+              </Form.Item>
+
+              <Form.Item
+                name="subject"
+                rules={[{ required: true, message: 'Lütfen Konu Giriniz!' }]}
+              >
+                <Input placeholder="Konu" />
+              </Form.Item>
+
+              <Form.Item
+                name="message"
+                rules={[{ required: true, message: 'Lütfen Mesajınızı Yazınız!' }]}
+              >
+                <TextArea rows={4} placeholder="Mesajınız" />
+              </Form.Item>
+
+              <Form.Item>
+                <Button type="primary" htmlType="submit" className="contact-form-button">
+                  Gönder
+                </Button>
+              </Form.Item>
+            </Form>
+          </Col>
+        </Row>
       </div>
-    </div>  
+    </div>
   );
 }
 

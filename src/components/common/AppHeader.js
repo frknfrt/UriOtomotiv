@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import logo from'../../assets/images/urıiOtomotiv_logo.jpeg'
-
-import { Anchor, Drawer, Button } from 'antd';
-
-const { Link } = Anchor;
+import logo from '../../assets/images/urıiOtomotiv_logo.jpeg';
+import { MenuOutlined } from '@ant-design/icons';
+import { Drawer, Button, Row, Col, Menu } from 'antd';
 
 function AppHeader() {
   const [visible, setVisible] = useState(false);
@@ -17,42 +15,56 @@ function AppHeader() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="header">
-        <div className="logo">
-        <img src={logo} />
-        </div>
-        <div className="mobileHidden">
-          <Anchor  targetOffset="65">
-            <Link href="/" title="Anasayfa" />
-            <Link href="/about" title="Hakkımızda" />
-            <Link href="#feature" title="Hizmetlerimiz" />
-            <Link href="#contact" title="İletişim" />
-          </Anchor>
-        </div>
-        <div className="mobileVisible">
-          <Button type="primary" onClick={showDrawer}>
-            <i className="fas fa-bars"></i>
-          </Button>
-          <Drawer
-            placement="right"
-            closable={false}
-            onClose={onClose}
-            visible={visible}
-          >
-            <Anchor targetOffset="65">
-              <Link href="/" title="Home" />
-              <Link href="#about" title="About" />
-              <Link href="#feature" title="Features" />
-              <Link href="#works" title="How it works" />
-              <Link href="#faq" title="FAQ" />
-              <Link href="#pricing" title="Pricing" />
-              <Link href="#contact" title="Contact" />
-            </Anchor>
-          </Drawer>
-        </div>
-      </div>
-    </div>
+    <header style={{ backgroundColor: '#1a1a1a', padding: '10px 20px' }}>
+      <Row align="middle" justify="space-between">
+        <Col>
+          <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={logo} alt="Logo" style={{ height: '50px' }} />
+          </div>
+        </Col>
+        <Col xs={0} sm={0} md={0} lg={18} xl={18}>
+          <Menu mode="horizontal" theme="dark" style={{ justifyContent: 'flex-end', background: '#1a1a1a' }}>
+            <Menu.Item key="home">
+              <a href="/">Anasayfa</a>
+            </Menu.Item>
+            <Menu.Item key="about">
+              <a href="/about">Hakkımızda</a>
+            </Menu.Item>
+            <Menu.Item key="services">
+              <a href="#feature">Hizmetlerimiz</a>
+            </Menu.Item>
+            <Menu.Item key="contact">
+              <a href="#contact">İletişim</a>
+            </Menu.Item>
+          </Menu>
+        </Col>
+        <Col xs={24} sm={24} md={24} lg={0} xl={0}>
+          <Button type="text" icon={<MenuOutlined />} onClick={showDrawer} style={{ color: 'white' }} />
+        </Col>
+      </Row>
+      <Drawer
+        title="Menü"
+        placement="right"
+        onClose={onClose}
+        visible={visible}
+        bodyStyle={{ padding: 0 }}
+      >
+        <Menu mode="vertical" theme="dark">
+          <Menu.Item key="home">
+            <a href="/">Anasayfa</a>
+          </Menu.Item>
+          <Menu.Item key="about">
+            <a href="/about">Hakkımızda</a>
+          </Menu.Item>
+          <Menu.Item key="services">
+            <a href="#feature">Hizmetlerimiz</a>
+          </Menu.Item>
+          <Menu.Item key="contact">
+            <a href="#contact">İletişim</a>
+          </Menu.Item>
+        </Menu>
+      </Drawer>
+    </header>
   );
 }
 
