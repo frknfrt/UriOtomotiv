@@ -8,13 +8,12 @@ const { Option } = Select;
 const TireSize = () => {
   const navigate = useNavigate();
   const [width, setWidth] = useState(155);
-  const [ratio, setRatio] = useState(45);
-  const [diameter, setDiameter] = useState(13);
+  const selectBoxValues=["18x7-8", "21x8-9","23x9-10","23x10-12","27x10-12", "28x9-15","250-15","300-15","400-8","500-8","600-9","650-10","700-12", "700-15","750-10","750-15","750-16","825-25","900-20","1000-20","1100-20","1200-20"]
+
 
   const handleChange = (value, option) => {
     if (option["data-info"] === "width") setWidth(option["value"]);
-    if (option["data-info"] === "ratio") setRatio(option["value"]);
-    if (option["data-info"] === "diameter") setDiameter(option["value"]);
+
   };
 
   const getTires = (width, ratio, diameter) => {
@@ -75,48 +74,25 @@ const TireSize = () => {
         cover={<img alt="Tire Sizes" src={tireImg} style={styles.image} />}
       >
         <Row gutter={[16, 16]} style={styles.row}>
-          <Col xs={24} sm={8}>
-            <div style={styles.label}>Genişlik</div>
+          <Col xs={24} sm={24}>
+            <div style={styles.label}>Lastik Ebatı</div>
             <Select
               id="width"
               style={styles.select}
-              defaultValue="155"
+              defaultValue="18x7-8"
               onChange={handleChange}
             >
-              <Option value="155" data-info="width">155</Option>
-              <Option value="175" data-info="width">175</Option>
-              <Option value="185" data-info="width">185</Option>
-            </Select>
-          </Col>
-          <Col xs={24} sm={8}>
-            <div style={styles.label}>Oran</div>
-            <Select
-              id="ratio"
-              style={styles.select}
-              defaultValue="45"
-              onChange={handleChange}
-            >
-              <Option value="45" data-info="ratio">45</Option>
-              <Option value="50" data-info="ratio">50</Option>
-              <Option value="55" data-info="ratio">55</Option>
-            </Select>
-          </Col>
-          <Col xs={24} sm={8}>
-            <div style={styles.label}>Jant Çapı</div>
-            <Select
-              id="diameter"
-              style={styles.select}
-              defaultValue="13"
-              onChange={handleChange}
-            >
-              <Option value="13" data-info="diameter">13</Option>
-              <Option value="14" data-info="diameter">14</Option>
-              <Option value="15" data-info="diameter">15</Option>
+              {
+               selectBoxValues.map(item=>{
+             return(
+                <Option value={item} data-info="width">{item}</Option>)
+               }) 
+              }
             </Select>
           </Col>
         </Row>
         <Row justify="center" style={styles.buttonRow}>
-          <Button style={styles.button} onClick={() => getTires(width, ratio, diameter)}>
+          <Button style={styles.button} onClick={() => getTires(width)}>
             Lastikleri Görüntüle
           </Button>
         </Row>
