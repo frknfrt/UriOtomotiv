@@ -1,64 +1,34 @@
-const LastiEbatMenuLabels=["Option1", "option2","Option3"]
 
-const NavMenuItems = [
-    {
-      key: 'sub1',
-      label: 'Navigation One',
-      children: 
-        LastiEbatMenuLabels.map((label,index)=>({
-          key: index,
-          label: label 
-        }))},
+const LastiEbatMenuLabels=["18x7-8", "21x8-9","23x9-10","23x10-12","27x10-12", "28x9-15","250-15","300-15","400-8","500-8","600-9","650-10","700-12", "700-15","750-10","750-15","750-16","825-25","900-20","1000-20","1100-20","1200-20"]
+const markaMenuLabels=["GRECKSTER","SOLİDEAL"]
+const lastikcesitMenuLabels=["Havalı","Dolgulu","Çemberli","İz Bırakmayan Lastik"]
+const NavMenuItems = [{
+  key: 'sub1',
+  label: 'Forklift Lastik Ebatları',
+  children: 
+    LastiEbatMenuLabels.map((label,index)=>({
+      key: index,
+      label: label 
+        }))},
+    
+
     {
       key: 'sub2',
-      label: 'Navigation Two',
-      children: [
-        {
-          key: '5',
-          label: 'Option 5',
-        },
-        {
-          key: '6',
-          label: 'Option 6',
-        },
-        {
-          key: 'sub3',
-          label: 'Submenu',
-          children: [
-            {
-              key: '7',
-              label: 'Option 7',
-            },
-            {
-              key: '8',
-              label: 'Option 8',
-            },
-          ],
-        },
-      ],
-    },
+      label: 'Forklift Lastik Markaları',
+      children: 
+     markaMenuLabels.map((label,index)=>({
+        key: index+"sub2",
+        label: label 
+          }))},
     {
       key: 'sub4',
-      label: 'Navigation Three',
-      children: [
-        {
-          key: '9',
-          label: 'Option 9',
-        },
-        {
-          key: '10',
-          label: 'Option 10',
-        },
-        {
-          key: '11',
-          label: 'Option 11',
-        },
-        {
-          key: '12',
-          label: 'Option 12',
-        },
-      ],
-    },
+      label: 'Forklift Lastik Çeşitleri',
+      children: 
+      lastikcesitMenuLabels.map((label,index)=>({
+        key: index+"sub4",
+        label: label 
+          }))},
+
   ];
 
   export  {NavMenuItems}
