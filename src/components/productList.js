@@ -1,10 +1,10 @@
-  const products = [
+const products = [
     {
       id: 1,
       name: 'Product 1',
       description: 'This is a description of Product 1.',
       price: '$20',
-      image: 'https://via.placeholder.com/200', // Ürün resmi
+      image: '../assets/images/lastik-1.png', // Ürün resmi
     },
     {
       id: 2,

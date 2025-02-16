@@ -18,53 +18,35 @@ function AppFeature() {
         <div className="titleHolder">
           <h2>Kampanyalı Ürünler</h2>
         </div>
-        <Row gutter={[16, 16]}>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Modern Design" src={image1} />}
-            >
+        <Row gutter={[16, 16]} justify="center">
+          <Col xs={24} sm={12} md={8} lg={6}>
+            <Card hoverable cover={<img alt="Modern Design" src={image1} />}>
               <Meta title="Modern Design" />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Test" src={image2} />}
-            >
-              <Meta title="Beyaz İz Bırakmayan Dolgu Sekmanlı Forklift Lastiği" />
+          <Col xs={24} sm={12} md={8} lg={6}>
+            <Card hoverable cover={<img alt="Modern Design" src={image2} />}>
+              <Meta title="Modern Design" />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Test" src={image3} />}
-            >
-              <Meta title="Beyaz İz Bırakmayan Dolgu Sekmanlı Forklift Lastiği" />
+          <Col xs={24} sm={12} md={8} lg={6}>
+            <Card hoverable cover={<img alt="Modern Design" src={image3} />}>
+              <Meta title="Modern Design" />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Test" src={image4} />}
-            >
-              <Meta title="Mfs101 Sekmanlı Dolgu Forklift Lastiği" />
+          <Col xs={24} sm={12} md={8} lg={6}>
+            <Card hoverable cover={<img alt="Modern Design" src={image4} />}>
+              <Meta title="Modern Design" />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Test" src={image5} />}
-            >
-              <Meta title="Beyaz İz Bırakmayan Dolgu Sekmanlı Forklift Lastiği" />
+          <Col xs={24} sm={12} md={8} lg={6}>
+            <Card hoverable cover={<img alt="Modern Design" src={image5} />}>
+              <Meta title="Modern Design" />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Test" src={image6} />}
-            >
-              <Meta title="Mfs101 Sekmanlı Dolgu Forklift Lastiği" />
+          <Col xs={24} sm={12} md={8} lg={6}>
+            <Card hoverable cover={<img alt="Modern Design" src={image6} />}>
+              <Meta title="Modern Design" />
             </Card>
           </Col>
         </Row>

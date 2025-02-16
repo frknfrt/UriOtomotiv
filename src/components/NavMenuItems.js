@@ -1,26 +1,14 @@
+const LastiEbatMenuLabels=["Option1", "option2","Option3"]
+
 const NavMenuItems = [
     {
       key: 'sub1',
       label: 'Navigation One',
-      children: [
-        {
-          key: '1',
-          label: 'Option 1',
-        },
-        {
-          key: '2',
-          label: 'Option 2',
-        },
-        {
-          key: '3',
-          label: 'Option 3',
-        },
-        {
-          key: '4',
-          label: 'Option 4',
-        },
-      ],
-    },
+      children: 
+        LastiEbatMenuLabels.map((label,index)=>({
+          key: index,
+          label: label 
+        }))},
     {
       key: 'sub2',
       label: 'Navigation Two',
