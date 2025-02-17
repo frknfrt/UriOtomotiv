@@ -1,11 +1,11 @@
 import React from 'react';
 
-import image1 from '../../assets/images/lastik-1.png';
-import image3 from '../../assets/images/lastik-1.png';
-import image5 from '../../assets/images/lastik-1.png';
-import image2 from '../../assets/images/lastik2.png';
-import image4 from '../../assets/images/lastik2.png';
-import image6 from '../../assets/images/lastik2.png';
+import image1 from '../../assets/images/1.png';
+import image3 from '../../assets/images/2.png';
+import image5 from '../../assets/images/3.png';
+import image2 from '../../assets/images/4.png';
+import image4 from '../../assets/images/5.png';
+import image6 from '../../assets/images/6.png';
 
 import { Row, Col } from 'antd';
 import { Card } from 'antd';
@@ -20,33 +20,33 @@ function AppFeature() {
         </div>
         <Row gutter={[16, 16]} justify="center">
           <Col xs={24} sm={12} md={8} lg={6}>
-            <Card hoverable cover={<img alt="Modern Design" src={image1} />}>
-              <Meta title="Modern Design" />
+            <Card hoverable cover={<img alt="Forklift Lastik" src={image1} />}>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
-            <Card hoverable cover={<img alt="Modern Design" src={image2} />}>
-              <Meta title="Modern Design" />
+            <Card hoverable cover={<img alt="Forklift Lastik" src={image2} />}>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
-            <Card hoverable cover={<img alt="Modern Design" src={image3} />}>
-              <Meta title="Modern Design" />
+            <Card hoverable cover={<img alt="Forklift Lastik" src={image3} />}>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
-            <Card hoverable cover={<img alt="Modern Design" src={image4} />}>
-              <Meta title="Modern Design" />
+            <Card hoverable cover={<img alt="Forklift Lastik" src={image4} />}>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
-            <Card hoverable cover={<img alt="Modern Design" src={image5} />}>
-              <Meta title="Modern Design" />
+            <Card hoverable cover={<img alt="Forklift Lastik" src={image5} />}>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
-            <Card hoverable cover={<img alt="Modern Design" src={image6} />}>
-              <Meta title="Modern Design" />
+            <Card hoverable cover={<img alt="Forklift Lastik" src={image6} />}>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
         </Row>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/images/urıiOtomotiv_logo.jpeg';
+import logo from '../../assets/images/yenilogo.png';
 import { MenuOutlined } from '@ant-design/icons';
 import { Drawer, Button, Row, Col, Menu } from 'antd';
 

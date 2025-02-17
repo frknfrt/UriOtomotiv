@@ -14,7 +14,10 @@ function AppFooter() {
           <li><a href="https://www.facebook.com/profile.php?id=100063639656768&locale=fo_FO"><i className="fab fa-facebook-f"></i></a></li>
           <li><a href="https://www.instagram.com/uriotomotivforkliftlastikleri/"><i className="fab fa-instagram"></i></a></li>
         </ul>
-        <div className="copyright">Copyright &copy; 2025 FRTDijitalPazarlama</div>
+        <div className="copyright">Copyright &copy; 2025
+          <a href="https://frtdijitalpazarlama.com/Anasayfa/">
+           FRTDijitalPazarlama</a>
+        </div>
         <FloatButton.BackTop>
           <div className="goTop"><i className="fas fa-arrow-circle-up"></i></div>
         </FloatButton.BackTop>
