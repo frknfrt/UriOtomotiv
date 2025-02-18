@@ -20,7 +20,7 @@ function AppHeader() {
         <Col>
           <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
             <img src={logo} alt="Logo" style={{ height: '50px' }} />
-          </div>
+           </div>
         </Col>
         <Col xs={0} sm={0} md={0} lg={18} xl={18}>
           <Menu mode="horizontal" theme="dark" style={{ justifyContent: 'flex-end', background: '#1a1a1a' }}>
