@@ -21,7 +21,10 @@ function AppFeature() {
         <Row gutter={[16, 16]} justify="center">
           <Col xs={24} sm={12} md={8} lg={6}>
             <Card hoverable cover={<img alt="Forklift Lastik" src={image1} />}>
-              <Meta title="Forklift Lastik" />
+            <Meta 
+  title="Forklift Lastik" 
+  style={{ fontSize: '70px', fontWeight: 'bold', textAlign: 'center' }} 
+/>
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
@@ -47,7 +50,7 @@ function AppFeature() {
           <Col xs={24} sm={12} md={8} lg={6}>
             <Card hoverable cover={<img alt="Forklift Lastik" src={image6} />}>
               <Meta title="Forklift Lastik" />
-            </Card>
+            </Card>1
           </Col>
         </Row>
       </div>
