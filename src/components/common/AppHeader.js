@@ -19,7 +19,7 @@ function AppHeader() {
       <Row align="middle" justify="space-between">
         <Col>
           <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={logo} alt="Logo" style={{ height: '50px' }} />
+            <a href='/'><img src={logo}  alt="Logo" style={{ height: '50px' }} /></a>
           </div>
         </Col>
         <Col xs={0} sm={0} md={0} lg={18} xl={18}>
