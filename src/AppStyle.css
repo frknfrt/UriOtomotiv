@@ -495,3 +495,132 @@ responsive
     display: none;
   }
 }
+/* Arka planın bulanık olması */
+.ant-modal-mask {
+  backdrop-filter: blur(5px);
+}
+
+/* Modal içeriği */
+.ant-modal-content {
+  border-radius: 12px; /* Köşeleri yuvarlat */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+  padding: 20px;
+  background: #fff;
+}
+
+/* Modal başlık */
+.ant-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Açıklama yazısı */
+.modal-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Resim stili */
+.modal-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Kapanış butonu özelleştirme */
+.ant-modal-close {
+  color: #333;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.ant-modal-close:hover {
+  color: red;
+}
+
+/* Açılış Animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Kapanış Animasyonu */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Açılış Animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Kapanış Animasyonu */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Modal Açılma */
+.custom-modal.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Modal Kapanma */
+.custom-modal.fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.closing-animation {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-text {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 10px;
+  text-align: justify;
+  max-height: 500px;
+  overflow-y: auto;
+}
+/* Modal Arka Planını Blurlamadan Düzgün Görünmesini Sağlar */
+.ant-modal-mask {
+  background: rgba(0, 0, 0, 0.5) !important;
+}

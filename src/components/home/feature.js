@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../AppStyle.css';
+import { Modal } from "antd";
+import { useNavigate } from "react-router-dom";
 
 import image1 from '../../assets/images/1.png';
 import image2 from '../../assets/images/4.png';
@@ -8,21 +10,37 @@ import image4 from '../../assets/images/3.png';
 import image5 from '../../assets/images/yeni2.png';
 import image6 from '../../assets/images/5.png';
 
-import { Row, Col, Modal, Card } from 'antd';
+import { Row, Col, Card } from 'antd';
 const { Meta } = Card;
 
 const tires = [
-  { id: 1, name: "Forklift Lastik", image: image1, description: "Dolgu Lastikler:Havasız ve tamamen kauçuktan üretilmiştir.Delinme riski yoktur ve uzun ömürlüdür.Beton, asfalt gibi sert zeminlerde ve ağır sanayi ortamlarında kullanılır.Bakım gerektirmez, dayanıklıdır, delinme veya patlama riski yoktur." },
-  { id: 2, name: "Forklift Lastik", image: image2, description: "Havalı Lastikler (Pneumatic Tires):İçerisinde hava bulunur, klasik otomobil lastikleri gibi şişirilebilir yapıdadır.Açık alanlarda, bozuk ve yumuşak zeminlerde (toprak, çakıl, çamur) tercih edilir.Yüksek darbe emilimi sayesinde daha konforlu bir sürüş sağlar." },
-  { id: 3, name: "Forklift Lastik", image: image3, description: "Çemberli Lastikler (Press-on Band Tires):Metal bir çemberin üzerine preslenmiş kauçuk kaplamadan oluşur.Kapalı alanlarda, depo ve fabrikalarda kullanılır.Yüksek taşıma kapasitesine sahiptir, dayanıklıdır ve küçük dönüş çapı sağlar." },
-  { id: 4, name: "Forklift Lastik", image: image4, description: "İz Bırakmayan Lastikler (Non-Marking Tires):Kauçuk yapısı özel bileşiklerle üretilir ve zeminde siyah iz bırakmaz.Gıda, ilaç ve temizlik sektörlerinde hijyenin önemli olduğu alanlarda kullanılır.Zemini kirletmez, temiz çalışma ortamları için idealdir." },
-  { id: 5, name: "Forklift Lastik", image: image5, description: "Forklift lastikleri, iş makinelerinin performansını doğrudan etkileyen kritik bileşenlerdir. Doğru lastik seçimi, işletmelerin verimliliğini artırır, maliyetlerini düşürür ve güvenliği sağlar.Sonuç olarak, forkliftiniz için doğru lastiği seçmek, hem işletme maliyetlerinizi azaltır hem de çalışma güvenliğinizi artırır!" },
-  { id: 6, name: "Forklift Lastik", image: image6, description: "Dolgu lastikler delinme ve patlamaya karşı dayanıklıdır, bakım gerektirmez ve uzun ömürlüdür. Havalı lastikler, esnek yapıları sayesinde darbe emici özellik sunarak sürüş konforunu artırır, ancak patlama riski bulunur. Çemberli lastikler, hızlı ve kolay montaj avantajı sağlarken, ağır yük taşıma kapasitesini artırır. İz bırakmayan lastikler ise özellikle kapalı alanlarda, hijyenin önemli olduğu ortamlarda tercih edilir ve zeminde siyah izler bırakmaz. Forklift lastikleri, güvenli manevra kabiliyeti ve zemin tutuşu sağladığı için kazaların önüne geçmeye yardımcı olur. Ayrıca doğru lastik seçimi, yakıt tüketimini optimize eder ve forkliftin motoruna binen yükü azaltır. Yanlış lastik seçimi ise performans düşüklüğüne, fazla yakıt tüketimine ve güvenlik risklerine yol açabilir. Sonuç olarak, çalışma alanına uygun forklift lastiği kullanmak, hem iş güvenliğini hem de operasyonel verimliliği artırarak işletmelerin uzun vadede maliyet tasarrufu yapmasına katkı sağlar." },
+  { id: 1, name: "Dolgu Lastikler", image: image1, description: "Dolgu forklift lastikleri, hava yerine sağlam dolgu malzemesiyle doldurulmuş lastiklerdir. Bu lastikler, patlama riski olmadan uzun süre dayanıklı olup, zorlu çalışma koşullarında kullanılır. Genellikle inşaat alanları, depolar ve ağır sanayi gibi ortamlarda tercih edilir çünkü bakım gerektirmezler ve dayanıklılık sağlarlar." },
+  { id: 2, name: "Havalı Lastikler", image: image2, description: "Havalı forklift lastikleri, içinde hava bulunan ve klasik araç lastikleri gibi şişirilen lastiklerdir. Bu lastikler, daha yumuşak bir sürüş sağlar, zeminle daha iyi temas eder ve titreşimi azaltır. Genellikle iç mekanlarda ve düzgün yüzeylerde çalışan forkliftlerde tercih edilir. Bakım gereksinimleri olabilir, çünkü hava basıncı düzenli olarak kontrol edilmelidir." },
+  { id: 3, name: "Çemberli Lastikler", image: image3, description: "Çemberli forklift lastikleri, genellikle sert ve dayanıklı bir metal çember ile desteklenen, iç kısmı sağlam olan lastiklerdir. Bu lastikler, patlamaya karşı dirençli olup, sağlam yapıları sayesinde zorlu koşullarda kullanılabilirler. Çemberli lastikler, özellikle ağır yük taşıyan forkliftlerde tercih edilir. Bu tasarım, lastiğin deforme olmasını engelleyerek, uzun ömürlü ve düşük bakım gereksinimli bir seçenek sunar." },
+  { id: 4, name: "İz Bırakmayan Lastikler", image: image4, description: "İz bırakmayan forklift lastikleri, özel bir bileşenle üretilen ve zeminde iz bırakmayan lastiklerdir. Genellikle iç mekanlarda, özellikle temiz yüzeylerde çalışan forkliftlerde kullanılır. Bu lastikler, zemine zarar vermeden güvenli bir şekilde hareket etmeyi sağlar. Özellikle gıda depoları, hastaneler ve temizlik gereksinimi yüksek alanlarda tercih edilir." },
+  { id: 5, name: "Doğru Forklift Lastik Seçimi", image: image5, description: "Forklift lastiği seçerken, öncelikle kullanım alanını ve koşullarını göz önünde bulundurmalısınız. İç mekan için iz bırakmayan lastikler, dış mekan için ise daha dayanıklı ve hava koşullarına uygun lastikler tercih edilir. Ayrıca, taşıyacağınız yük miktarı ve forkliftin çalışma şekli de lastik tipini belirler. Havalı lastikler yumuşak sürüş sunarken, dolgu lastikler patlama riskini ortadan kaldırır ve uzun ömürlüdür. Yola göre lastik sertliği ve bakım gereksinimlerini de dikkate alarak, ihtiyaçlarınıza en uygun lastiği seçmelisiniz." },
+  { id: 6, name: "Özel Kauçuk Forklift Lastikleri", image: image6, description: "Esnek yapısı sayesinde daha konforlu kullanım sağlar." },
 ];
 
 function AppFeature() {
   const [selectedTire, setSelectedTire] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [closing, setClosing] = useState(false);
+  const navigate = useNavigate();
 
+  const handleOpenModal = (tire) => {
+    setSelectedTire(tire);
+    setModalVisible(true);
+    setClosing(false);
+  };
+
+  const handleCloseModal = () => {
+    setClosing(true); // Kapanış animasyonunu başlat
+    setTimeout(() => {
+      setClosing(false); // Animasyon bittikten sonra sıfırla
+      setSelectedTire(null); // Seçili lastiği sıfırla
+    }, 300); // 300ms sonra modal tamamen kapanacak
+  };
   return (
     <div id="feature" className="block featureBlock bgGray">
       <div className="container-fluid">
@@ -35,7 +53,7 @@ function AppFeature() {
               <Card
                 hoverable
                 cover={<img alt={tire.name} src={tire.image} />}
-                onClick={() => setSelectedTire(tire)}
+                onClick={() => handleOpenModal(tire)}
               >
                 <Meta title={tire.name} />
               </Card>
@@ -45,16 +63,17 @@ function AppFeature() {
       </div>
 
       {selectedTire && (
-        <Modal
-          title={selectedTire.name}
-          visible={true}
-          onCancel={() => setSelectedTire(null)}
-          footer={null}
-        >
-          <img src={selectedTire.image} alt={selectedTire.name} style={{ width: "100%", borderRadius: "8px" }} />
-          <p style={{ marginTop: "16px" }}>{selectedTire.description}</p>
-        </Modal>
-      )}
+  <Modal
+    title={selectedTire.name}
+    open={true}
+    onCancel={handleCloseModal}
+    footer={null}
+    className={closing ? "closing-animation" : ""}
+  >
+    <img src={selectedTire.image} alt={selectedTire.name} className="modal-image"/>
+    <p style={{ marginTop: "16px" }}>{selectedTire.description}</p>
+  </Modal>
+)}
     </div>
   );
 }
