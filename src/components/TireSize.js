@@ -7,7 +7,7 @@ const { Option } = Select;
 
 const TireSize = () => {
   const navigate = useNavigate();
-  const [width, setWidth] = useState(155);
+  const [width, setWidth] = useState("  18x7-8");
   const selectBoxValues=["18x7-8", "21x8-9","23x9-10","23x10-12","27x10-12", "28x9-15","250-15","300-15","400-8","500-8","600-9","650-10","700-12", "700-15","750-10","750-15","750-16","825-25","900-20","1000-20","1100-20","1200-20"]
 
 
@@ -16,8 +16,8 @@ const TireSize = () => {
 
   };
 
-  const getTires = (width, ratio, diameter) => {
-    navigate(`/products/${width}/${ratio}/${diameter}`);
+  const getTires = (width) => {
+    navigate(`/products/${width}`);
   };
 
   const styles = {

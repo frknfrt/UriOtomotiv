@@ -13,7 +13,7 @@ const { Header, Content, Footer } = Layout;
 
 
 const Products = ()=> {
-  const { width,ratio,diameter} = useParams();
+  const { width} = useParams();
   const [current, setCurrent] = useState('1');
 
   const onClick = (e) => {
