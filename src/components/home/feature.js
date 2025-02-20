@@ -1,11 +1,12 @@
 import React from 'react';
+import '../../AppStyle.css';
 
 import image1 from '../../assets/images/1.png';
-import image3 from '../../assets/images/2.png';
-import image5 from '../../assets/images/3.png';
+import image3 from '../../assets/images/yeni1.png';
+import image5 from '../../assets/images/yeni2.png';
 import image2 from '../../assets/images/4.png';
-import image4 from '../../assets/images/5.png';
-import image6 from '../../assets/images/6.png';
+import image4 from '../../assets/images/3.png';
+import image6 from '../../assets/images/5.png';
 
 import { Row, Col } from 'antd';
 import { Card } from 'antd';
@@ -21,10 +22,7 @@ function AppFeature() {
         <Row gutter={[16, 16]} justify="center">
           <Col xs={24} sm={12} md={8} lg={6}>
             <Card hoverable cover={<img alt="Forklift Lastik" src={image1} />}>
-            <Meta 
-  title="Forklift Lastik" 
-  style={{ fontSize: '70px', fontWeight: 'bold', textAlign: 'center' }} 
-/>
+              <Meta title="Forklift Lastik" />
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8} lg={6}>
