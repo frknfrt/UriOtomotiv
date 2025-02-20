@@ -7,7 +7,7 @@ const NavMenuItems = [{
   label: 'Forklift Lastik Ebatları',
   children: 
     LastiEbatMenuLabels.map((label,index)=>({
-      key: index,
+      key: label,
       label: label 
         }))},
     
@@ -17,7 +17,7 @@ const NavMenuItems = [{
       label: 'Forklift Lastik Markaları',
       children: 
      markaMenuLabels.map((label,index)=>({
-        key: index+"sub2",
+        key: label,
         label: label 
           }))},
     {
@@ -25,7 +25,7 @@ const NavMenuItems = [{
       label: 'Forklift Lastik Çeşitleri',
       children: 
       lastikcesitMenuLabels.map((label,index)=>({
-        key: index+"sub4",
+        key: label,
         label: label 
           }))},
 

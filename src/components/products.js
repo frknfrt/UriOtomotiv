@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import AppHeader from './common/AppHeader'
 import AppFooter from './common/AppFooter';
@@ -14,14 +14,18 @@ const { Header, Content, Footer } = Layout;
 
 const Products = ()=> {
   const { width} = useParams();
-  const [current, setCurrent] = useState('1');
+  const [current, setCurrent] = useState(width);
 
   const onClick = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
   };
 
-
+  useEffect(() => {
+    if (width) {
+      setCurrent(width);
+    }
+  }, [width]);
     return (
       <Layout className="mainLayout">
         <Header>
