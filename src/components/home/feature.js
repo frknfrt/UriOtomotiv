@@ -19,7 +19,7 @@ const tires = [
   { id: 3, name: "Çemberli Lastikler", image: image3, description: "Çemberli forklift lastikleri, genellikle sert ve dayanıklı bir metal çember ile desteklenen, iç kısmı sağlam olan lastiklerdir. Bu lastikler, patlamaya karşı dirençli olup, sağlam yapıları sayesinde zorlu koşullarda kullanılabilirler. Çemberli lastikler, özellikle ağır yük taşıyan forkliftlerde tercih edilir. Bu tasarım, lastiğin deforme olmasını engelleyerek, uzun ömürlü ve düşük bakım gereksinimli bir seçenek sunar." },
   { id: 4, name: "İz Bırakmayan Lastikler", image: image4, description: "İz bırakmayan forklift lastikleri, özel bir bileşenle üretilen ve zeminde iz bırakmayan lastiklerdir. Genellikle iç mekanlarda, özellikle temiz yüzeylerde çalışan forkliftlerde kullanılır. Bu lastikler, zemine zarar vermeden güvenli bir şekilde hareket etmeyi sağlar. Özellikle gıda depoları, hastaneler ve temizlik gereksinimi yüksek alanlarda tercih edilir." },
   { id: 5, name: "Doğru Forklift Lastik Seçimi", image: image5, description: "Forklift lastiği seçerken, öncelikle kullanım alanını ve koşullarını göz önünde bulundurmalısınız. İç mekan için iz bırakmayan lastikler, dış mekan için ise daha dayanıklı ve hava koşullarına uygun lastikler tercih edilir. Ayrıca, taşıyacağınız yük miktarı ve forkliftin çalışma şekli de lastik tipini belirler. Havalı lastikler yumuşak sürüş sunarken, dolgu lastikler patlama riskini ortadan kaldırır ve uzun ömürlüdür. Yola göre lastik sertliği ve bakım gereksinimlerini de dikkate alarak, ihtiyaçlarınıza en uygun lastiği seçmelisiniz." },
-  { id: 6, name: "Özel Kauçuk Forklift Lastikleri", image: image6, description: "Esnek yapısı sayesinde daha konforlu kullanım sağlar." },
+  { id: 6, name: "Forklift Lastik Basıncı Neden Önemlidir?", image: image6, description: "Yanlış hava basıncı, lastiklerin daha hızlı aşınmasına ve forkliftin dengesiz çalışmasına neden olabilir. Doğru basınç seviyesi, yakıt tasarrufu sağlar ve iş güvenliğini artırır." },
 ];
 
 function AppFeature() {
@@ -45,7 +45,7 @@ function AppFeature() {
     <div id="feature" className="block featureBlock bgGray">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Kampanyalı Ürünler</h2>
+          <h2>Üstün Kalite Forklift Lastiklerimiz</h2>
         </div>
         <Row gutter={[16, 16]} justify="center">
           {tires.map((tire) => (

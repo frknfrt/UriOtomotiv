@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import tireImg from '../assets/images/tire-sizes.png';
+import tireImg from '../assets/images/TİRE.png';
 import { Card, Row, Col, Select, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
