@@ -17,6 +17,11 @@ body {
   min-height: 100vh;
 }
 
+.ant-drawer-header,
+.ant-drawer-body{
+background: #1c1c1c
+}
+
 
 .ant-card-cover img {
 max-height: 380px;
