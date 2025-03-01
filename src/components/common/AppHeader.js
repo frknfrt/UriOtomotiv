@@ -34,7 +34,7 @@ function AppHeader() {
               <a href="#feature">Hizmetlerimiz</a>
             </Menu.Item>
             <Menu.Item key="contact">
-              <a href="#contact">İletişim</a>
+              <a href="/contact">İletişim</a>
             </Menu.Item>
           </Menu>
         </Col>
