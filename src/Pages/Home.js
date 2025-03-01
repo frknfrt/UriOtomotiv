@@ -8,6 +8,7 @@ import AppWorks from '../components/home/works';
 import AppContact from '../components/home/contact';
 import './../AppStyle.css';
 
+
 const { Content, Footer } = Layout;
 
 const Home = () => {

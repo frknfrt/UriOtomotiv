@@ -15,15 +15,15 @@ function AppHeader() {
   };
 
   return (
-    <header style={{ backgroundColor: '#1a1a1a', padding: '10px 20px' }}>
+    <header style={{ backgroundColor: '#333', padding: '10px 20px' }}>
       <Row align="middle" justify="space-between">
         <Col>
           <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
- <a href='/'><img src={logo}  alt="Logo" style={{ height: '70px' }} /></a>
+ <a href='/'><img src={logo}  alt="Logo" style={{ height: '85px' }} /></a>
           </div>
         </Col>
         <Col xs={0} sm={0} md={0} lg={18} xl={18}>
-          <Menu mode="horizontal" theme="dark" style={{ justifyContent: 'flex-end', background: '#1a1a1a' }}>
+          <Menu mode="horizontal" theme="dark" style={{ justifyContent: 'flex-end', background: '#333' }}>
             <Menu.Item key="home">
               <a href="/">Anasayfa</a>
             </Menu.Item>
