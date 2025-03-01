@@ -21,8 +21,12 @@ const CarouselComponent = () => {
   const styles = {
     container: {
       position: "relative",
-      height: "100vh",
+      width: "100vw", 
+      height: "100vh", 
       overflow: "hidden",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
     image: {
       width: "100%",
