@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Layout, Row } from 'antd';
+import { Col, Layout, Row,Card } from 'antd';
 import AppHeader from '../components/common/AppHeader';
 import AppFooter from '../components/common/AppFooter';
 import './../AppStyle.css';
@@ -10,33 +10,44 @@ const ContactPage = () => {
   return (
 
     
-    <Layout className="mainLayout" style={{ backgroundColor: "black" }}>
+    <Layout className="mainLayout">
     <AppHeader />
-    <Content>
-      
-          
-    <div className="flex flex-col md:flex-row h-screen p-4">
-      {/* Sol Taraf - İletişim Bilgileri */}
-      <div className="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-md" style={{color:'white'}}>
-        <h2 className="text-2xl font-bold mb-4">İletişim Bilgileri</h2>
-        <p><strong>Adres:</strong> Örnek Mah. 123. Sok. No:45, İstanbul</p>
-        <p><strong>Telefon:</strong> +90 555 123 45 67</p>
-        <p><strong>E-posta:</strong> info@ornek.com</p>
-        <p><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 09:00 - 18:00</p>
-      </div>
+    <Content style={{ backgroundColor: '#121212'}}>
 
-      {/* Sağ Taraf - Google Harita */}
-      <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4">
-        <iframe
-          title="Google Map"
-          className="w-full h-full rounded-lg shadow-md"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.3485403697753!2d28.978378275511586!3d41.00823727131402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab99a2b8fbab5%3A0xf2c01e963a118e16!2sİstanbul!5e0!3m2!1str!2str!4v1700000000000"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+    <div  style={{ padding: '40px 20px', color: 'white' }}>
+      <Row justify="center">
+        <Col xs={24} md={20} lg={16}>
+          <Card style={{ backgroundColor: '#1c1c1c', borderColor: '#333', padding: '20px' }}>
+            <Row gutter={[32, 32]} justify="space-between" align="middle">
+              {/* Sol Taraf - İletişim Bilgileri */}
+              <Col xs={24} md={12} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <div className="titleHolder" style={{ textAlign: 'left' }}>
+                  <h2 style={{ color: '#ffffff' }}>İletişim Bilgileri</h2>
+                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Adres:</strong> İkitelli OSB, Hırdavatçılar Sanayi Sitesi No:56, 34490 Başakşehir/İstanbul, Türkiye</p>
+                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Telefon:</strong> +90 531-510-89-05</p>
+                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>E-posta:</strong> info@ornek.com</p>
+                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 08:00 - 17:00</p>
+                </div>
+              </Col>
+              
+              {/* Sağ Taraf - Google Harita */}
+              <Col xs={24} md={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <iframe
+                  title="Google Map"
+                  className="w-full rounded-lg shadow-md"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187.99899395609884!2d28.792759731149587!3d41.06934449938908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa59565a5da7f%3A0xd94b642f87676e97!2zw5xSxLAgT1RPTU9UxLBWIEZPUktMxLBGVCBMQVNUxLBLTEVSxLA!5e0!3m2!1sen!2sus!4v1740866276553!5m2!1sen!2sus"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  style={{ width: '100%', height: '400px' }}
+                ></iframe>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+      </Row>
     </div>
+  
 
    
     </Content>
