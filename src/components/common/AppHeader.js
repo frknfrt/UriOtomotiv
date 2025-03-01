@@ -31,7 +31,7 @@ function AppHeader() {
               <a href="/about">Hakkımızda</a>
             </Menu.Item>
             <Menu.Item key="services">
-              <a href="#feature">Hizmetlerimiz</a>
+              <a href="/products/18x7-8">Ürünlerimiz</a>
             </Menu.Item>
             <Menu.Item key="contact">
               <a href="/contact">İletişim</a>
@@ -57,7 +57,7 @@ function AppHeader() {
             <a href="/about">Hakkımızda</a>
           </Menu.Item>
           <Menu.Item key="services">
-            <a href="#feature">Hizmetlerimiz</a>
+            <a href="/products/18x7-8">Ürünlerimiz</a>
           </Menu.Item>
           <Menu.Item key="contact">
             <a href="#contact">İletişim</a>
