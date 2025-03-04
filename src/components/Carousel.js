@@ -51,7 +51,7 @@ const CarouselComponent = () => {
   };
 
   return (
-    <Carousel afterChange={() => {}}>
+    <Carousel style={{marginTop:30}}>
       <div style={styles.container}>
         <img style={styles.image} src={mainImg} alt="Slide" />
         <div style={styles.tireSizeWrapper}>
