@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../assets/images/yenilogo.png';
 import { MenuOutlined } from '@ant-design/icons';
 import { Drawer, Button, Row, Col, Menu } from 'antd';
+import { Link } from 'react-router-dom';
 
 function AppHeader() {
   const [visible, setVisible] = useState(false);
@@ -25,16 +26,16 @@ function AppHeader() {
         <Col xs={0} sm={0} md={0} lg={18} xl={18}>
           <Menu mode="horizontal" theme="dark" style={{ justifyContent: 'flex-end', background: '#333' }}>
             <Menu.Item key="home">
-              <a href="/">Anasayfa</a>
+              <Link to="/">Anasayfa</Link>
             </Menu.Item>
             <Menu.Item key="about">
-              <a href="/about">Hakkımızda</a>
+            <Link to="/about">Hakkımızda</Link>
             </Menu.Item>
             <Menu.Item key="services">
-              <a href="/products/18x7-8">Ürünlerimiz</a>
+            <Link to="/products/18x7-8">Ürünlerimiz</Link>
             </Menu.Item>
             <Menu.Item key="contact">
-              <a href="/contact">İletişim</a>
+            <Link to="/contact">İletişim</Link>
             </Menu.Item>
           </Menu>
         </Col>
@@ -50,18 +51,18 @@ function AppHeader() {
         bodyStyle={{ padding: 0 }}
       >
         <Menu mode="vertical" theme="dark">
-          <Menu.Item key="home">
-            <a href="/">Anasayfa</a>
-          </Menu.Item>
-          <Menu.Item key="about">
-            <a href="/about">Hakkımızda</a>
-          </Menu.Item>
-          <Menu.Item key="services">
-            <a href="/products/18x7-8">Ürünlerimiz</a>
-          </Menu.Item>
-          <Menu.Item key="contact">
-            <a href="#contact">İletişim</a>
-          </Menu.Item>
+        <Menu.Item key="home">
+              <Link to="/">Anasayfa</Link>
+            </Menu.Item>
+            <Menu.Item key="about">
+            <Link to="/about">Hakkımızda</Link>
+            </Menu.Item>
+            <Menu.Item key="services">
+            <Link to="/products/18x7-8">Ürünlerimiz</Link>
+            </Menu.Item>
+            <Menu.Item key="contact">
+            <Link to="/contact">İletişim</Link>
+            </Menu.Item>
         </Menu>
       </Drawer>
     </header>
