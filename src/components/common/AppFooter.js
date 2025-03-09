@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { FloatButton } from 'antd';
-import { Color } from 'antd/es/color-picker';
 
 function AppFooter() {
   return (
@@ -18,9 +16,6 @@ function AppFooter() {
         <div className="copyright">Copyright &copy; 2025
           <a href="https://frtdijitalpazarlama.com/Anasayfa/" style={{color:'white'}}> FRTDijitalPazarlama</a>
         </div>
-        <FloatButton.BackTop>
-          <div className="goTop"><i className="fas fa-arrow-circle-up"></i></div>
-        </FloatButton.BackTop>
       </div>
     </div>
   );
