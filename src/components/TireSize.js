@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import tireImg from '../assets/images/TİRE.png';
+import tireImg from '../assets/images/tasarımyenimichelin.png';
 import { Card, Row, Col, Select, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const { Option } = Select;
 const TireSize = () => {
   const navigate = useNavigate();
   const [width, setWidth] = useState("18x7-8");
-  const selectBoxValues=["18x7-8", "21x8-9","23x9-10","23x10-12","27x10-12", "28x9-15","250-15","300-15","400-8","500-8","600-9","650-10","700-12", "700-15","750-10","750-15","750-16","825-25","900-20","1000-20","1100-20","1200-20"]
+  const selectBoxValues=["18x7-8", "21x8-9","23x9-10","23x10-12","27x10-12", "28x9-15(815-15)","250-15","300-15","400-8","500-8","600-9","650-10","700-12", "700-15","750-10","750-15","750-16","825-25","900-20","1000-20","1100-20","1200-20","140/55-9","15x4 1/2-8","16x6-8","200/50-10","10 1/2x5x6 1/2","16x6x10 1/2","16 1/4x7x11 1/4","18x8x12 1/8","21x7x15","21x8x15",]
 
 
   const handleChange = (value, option) => {

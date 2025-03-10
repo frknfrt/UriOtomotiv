@@ -25,8 +25,8 @@ const ContactPage = () => {
                   <h2 style={{ color: '#ffffff' }}>İletişim Bilgileri</h2>
                   <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Adres:</strong> İkitelli OSB, Hırdavatçılar Sanayi Sitesi No:56, 34490 Başakşehir/İstanbul, Türkiye</p>
                   <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Telefon:</strong> +90 531-510-89-05</p>
-                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>E-posta:</strong> info@ornek.com</p>
-                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 08:00 - 17:00</p>
+                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>E-posta:</strong> tugayanil@outlook.com</p>
+                  <p style={{ lineHeight: '1.8', fontSize: '16px', color: 'white' }}><strong>Çalışma Saatleri:</strong> Pazartesi - Cuma, 08:00 - 16:00</p>
                 </div>
               </Col>
               

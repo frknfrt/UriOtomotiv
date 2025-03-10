@@ -27,7 +27,7 @@ background: #1c1c1c
 max-height: 380px;
 }
 .ant-anchor-link-title{
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 .container-fluid {
   margin: 0 auto;

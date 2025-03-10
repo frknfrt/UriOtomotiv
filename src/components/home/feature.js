@@ -3,10 +3,10 @@ import '../../AppStyle.css';
 import { Modal } from "antd";
 import { useNavigate } from "react-router-dom";
 
-import image1 from '../../assets/images/yeni2.png';
+import image1 from '../../assets/images/siyah dolgu logolu.png';
 import image2 from '../../assets/images/4.png';
-import image3 from '../../assets/images/5.png';
-import image4 from '../../assets/images/3.png';
+import image3 from '../../assets/images/beyaz çemberli uri logolu.png';
+import image4 from '../../assets/images/iz bırakmayan dolgu logolu.png';
 import { Row, Col, Card } from 'antd';
 const { Meta } = Card;
 
