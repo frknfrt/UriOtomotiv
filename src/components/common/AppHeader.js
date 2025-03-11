@@ -16,7 +16,7 @@ function AppHeader() {
   };
 
   return (
-    <header style={{ backgroundColor: '#ffffff', padding: '10px 20px' }}>
+    <header className="header-bordered" style={{ backgroundColor: '#ffffff' }}>
       <Row align="middle" justify="space-between">
         <Col>
           <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
@@ -24,7 +24,7 @@ function AppHeader() {
           </div>
         </Col>
         <Col xs={0} sm={0} md={0} lg={18} xl={18}>
-          <Menu mode="horizontal" theme="dark" style={{ justifyContent: 'flex-end', background: '#ffffff' }}>
+          <Menu mode="horizontal" className="menu-dark"  theme="dark" style={{ justifyContent: 'flex-end', background: '#ffffff' }}>
             <Menu.Item key="home">
               <Link to="/">Anasayfa</Link>
             </Menu.Item>
@@ -50,7 +50,7 @@ function AppHeader() {
         visible={visible}
         bodyStyle={{ padding: 0 }}
       >
-        <Menu mode="vertical" theme="dark">
+        <Menu mode="vertical" className="menu-dark" theme="dark">
         <Menu.Item key="home">
               <Link to="/">Anasayfa</Link>
             </Menu.Item>

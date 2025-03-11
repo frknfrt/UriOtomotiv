@@ -70,7 +70,7 @@ title holder
 .titleHolder:after {
   transform: translateX(-50%);
   content: '';
-  background: #1890ff;
+  background: #2591e0;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -109,7 +109,7 @@ header
 }
 
 .header .logo .fas {
-  color: #1890ff;
+  color: #2591e0;
   margin: 0 5px 0 0;
   font-size: 28px;
 }
@@ -139,7 +139,7 @@ header
 .header .ant-anchor-link:before,
 .header .ant-anchor-link:after {
   content: '';
-  background: #1890ff;
+  background: #2591e0;
   width: 1px;
   position: absolute;
   top: 2px;
@@ -180,7 +180,7 @@ header
 .header .ant-menu li.ant-menu-item:before,
 .header .ant-menu li.ant-menu-item:after {
   content: '';
-  background: #1890ff;
+  background: #2591e0;
   width: 1px;
   position: absolute;
   top: 2px;
@@ -202,7 +202,7 @@ header
 
 .header .ant-menu li.ant-menu-item-selected,
 .header .ant-menu li.ant-menu-item:hover {
-  color: #1890ff;
+  color: #2591e0;
   background: none;
 }
 
@@ -243,7 +243,7 @@ hero
 }
 
 .heroBlock .slick-dots li.slick-active button {
-  background: #1890ff !important;
+  background: #2591e0 !important;
 }
 
 .heroBlock .content {
@@ -293,10 +293,39 @@ about
 
 .aboutBlock .icon {
   font-size: 40px;
-  color: #1890ff;
+  color: #2591e0;
   margin: 0 0 10px;
 }
+.menu-dark a {
+  color: black !important;
+  font-size:medium;
+}
 
+.header-bordered {
+  position: relative;
+}
+
+.header-bordered::before,
+.header-bordered::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #2591e0;
+}
+
+.header-bordered::before {
+  top: 0;
+  height: 2px; /* Üst çizgi biraz daha kalın */
+}
+
+.header-bordered::after {
+  bottom: 0;
+  height: 2px; /* Alt çizgi ince */
+}
+.header-bordered {
+  min-height: 50px; /* Yüksekliği belirle */
+}
 .aboutBlock .content {
   text-align: center;
 }
@@ -435,7 +464,7 @@ footer
 }
 
 .footer .fas {
-  color: #1890ff;
+  color: #2591e0;
   font-size: 28px;
   margin: 0 5px 0 0;
 }
@@ -462,7 +491,7 @@ footer
 }
 
 .footer .socials a:hover {
-  color: #1890ff;
+  color: #2591e0;
 }
 
 .footer .goTop:hover {
