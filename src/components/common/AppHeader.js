@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/images/yenilogo.png';
+import logo from '../../assets/images/yapılmışyenilogo.png';
 import { MenuOutlined } from '@ant-design/icons';
 import { Drawer, Button, Row, Col, Menu } from 'antd';
 import { Link } from 'react-router-dom';
@@ -20,7 +20,7 @@ function AppHeader() {
       <Row align="middle" justify="space-between">
         <Col>
           <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
- <a href='/'><img src={logo}  alt="Logo" style={{ height: '85px' }} /></a>
+ <a href='/'><img src={logo}  alt="Logo" style={{ height: '90px' }} /></a>
           </div>
         </Col>
         <Col xs={0} sm={0} md={0} lg={18} xl={18}>
